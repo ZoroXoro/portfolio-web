@@ -9,9 +9,16 @@ const sharp = require("sharp");
 dotenv.config();
 
 // Initialize Firebase Admin
-const serviceAccount = process.env.FIREBASE_SERVICE_ACCOUNT_PATH
-  ? require(path.resolve(process.env.FIREBASE_SERVICE_ACCOUNT_PATH))
-  : JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT || "{}");
+let serviceAccount = {};
+if (process.env.FIREBASE_SERVICE_ACCOUNT) {
+  serviceAccount = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT);
+} else if (process.env.FIREBASE_SERVICE_ACCOUNT_PATH) {
+  try {
+    serviceAccount = require(path.resolve(process.env.FIREBASE_SERVICE_ACCOUNT_PATH));
+  } catch {
+    console.error("Service account file not found, falling back to env var");
+  }
+}
 
 if (Object.keys(serviceAccount).length > 0) {
   admin.initializeApp({
