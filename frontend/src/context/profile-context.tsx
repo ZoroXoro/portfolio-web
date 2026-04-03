@@ -12,6 +12,7 @@ interface Profile {
   github: string;
   linkedin: string;
   whatsapp: string;
+  resumeUrl: string;
 }
 
 const defaults: Profile = {
@@ -24,6 +25,7 @@ const defaults: Profile = {
   github: "https://github.com/Harsh-kamble",
   linkedin: "https://www.linkedin.com/in/harsh-kamble",
   whatsapp: "917039140235",
+  resumeUrl: "",
 };
 
 const ProfileContext = createContext<Profile>(defaults);

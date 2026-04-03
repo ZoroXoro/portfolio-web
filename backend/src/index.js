@@ -235,6 +235,25 @@ app.put("/api/profile", authMiddleware, async (req, res) => {
   }
 });
 
+// ===== RESUME ROUTE =====
+app.put("/api/resume", authMiddleware, upload.single("resume"), async (req, res) => {
+  try {
+    if (!req.file) return res.status(400).json({ error: "No file uploaded" });
+    if (req.file.mimetype !== "application/pdf") {
+      return res.status(400).json({ error: "Only PDF files are accepted" });
+    }
+    if (req.file.buffer.length > 4 * 1024 * 1024) {
+      return res.status(400).json({ error: "Resume PDF must be under 4MB" });
+    }
+    const base64 = req.file.buffer.toString("base64");
+    const resumeUrl = `data:application/pdf;base64,${base64}`;
+    await db.collection("settings").doc("profile").set({ resumeUrl }, { merge: true });
+    res.json({ message: "Resume uploaded", resumeUrl });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
 // ===== CONNECTIONS (Contact Form) ROUTES =====
 app.post("/api/connections", async (req, res) => {
   try {

@@ -2,7 +2,7 @@
 
 import { useRef, useState } from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "motion/react";
-import { Github, Linkedin, MessageCircle, ArrowDown, MapPin, Sparkles } from "lucide-react";
+import { Github, Linkedin, MessageCircle, ArrowDown, MapPin, Sparkles, Download } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useProfile } from "@/context/profile-context";
@@ -175,6 +175,16 @@ export default function HeroSection() {
                 View Projects
               </motion.button>
             </Link>
+            <motion.a
+              href={profile.resumeUrl || "/resume.pdf"}
+              download="Harsh_Kamble_Resume.pdf"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full font-medium border border-border hover:bg-muted transition-colors"
+            >
+              <Download size={16} />
+              Resume
+            </motion.a>
           </motion.div>
 
           {/* Social links */}

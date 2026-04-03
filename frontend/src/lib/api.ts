@@ -85,6 +85,17 @@ export async function deleteCertificate(id: string) {
   return handleResponse(res);
 }
 
+// Resume
+export async function uploadResume(formData: FormData) {
+  const headers = await authHeaders();
+  const res = await fetch(`${API_URL}/resume`, {
+    method: "PUT",
+    headers,
+    body: formData,
+  });
+  return handleResponse(res);
+}
+
 // Profile
 export async function fetchProfile() {
   const res = await fetch(`${API_URL}/profile`);

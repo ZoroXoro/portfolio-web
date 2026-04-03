@@ -2,12 +2,12 @@
 
 import { useEffect, useState, FormEvent } from "react";
 import { motion } from "motion/react";
-import { Save, Loader2, CheckCircle } from "lucide-react";
+import { Save, Loader2, CheckCircle, FileUp, AlertCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { fetchProfile, updateProfile } from "@/lib/api";
+import { fetchProfile, updateProfile, uploadResume } from "@/lib/api";
 
 export default function AdminProfilePage() {
   const [form, setForm] = useState({
@@ -23,12 +23,17 @@ export default function AdminProfilePage() {
   });
   const [loading, setLoading] = useState(false);
   const [saved, setSaved] = useState(false);
+  const [resumeFile, setResumeFile] = useState<File | null>(null);
+  const [resumeUploading, setResumeUploading] = useState(false);
+  const [resumeStatus, setResumeStatus] = useState<"idle" | "success" | "error">("idle");
+  const [hasResume, setHasResume] = useState(false);
 
   useEffect(() => {
     fetchProfile()
       .then((data: Record<string, string>) => {
         if (data && Object.keys(data).length > 0) {
           setForm((prev) => ({ ...prev, ...data }));
+          if (data.resumeUrl) setHasResume(true);
         }
       })
       .catch(() => {});
@@ -45,6 +50,26 @@ export default function AdminProfilePage() {
       console.error(err);
     } finally {
       setLoading(false);
+    }
+  };
+
+  const handleResumeUpload = async () => {
+    if (!resumeFile) return;
+    setResumeUploading(true);
+    setResumeStatus("idle");
+    try {
+      const formData = new FormData();
+      formData.append("resume", resumeFile);
+      await uploadResume(formData);
+      setResumeStatus("success");
+      setHasResume(true);
+      setResumeFile(null);
+      setTimeout(() => setResumeStatus("idle"), 4000);
+    } catch {
+      setResumeStatus("error");
+      setTimeout(() => setResumeStatus("idle"), 4000);
+    } finally {
+      setResumeUploading(false);
     }
   };
 
@@ -149,6 +174,51 @@ export default function AdminProfilePage() {
                 className="mt-1"
               />
             </div>
+          </div>
+
+          <div className="p-6 rounded-xl border border-border bg-card space-y-4">
+            <div className="flex items-center justify-between">
+              <h2 className="font-semibold text-lg">Resume</h2>
+              {hasResume && (
+                <span className="text-xs text-green-500 flex items-center gap-1">
+                  <CheckCircle size={12} /> Resume uploaded
+                </span>
+              )}
+            </div>
+            <p className="text-sm text-muted-foreground">
+              Upload a PDF to replace the downloadable resume on your portfolio.
+            </p>
+            <div className="flex items-center gap-3 flex-wrap">
+              <Input
+                type="file"
+                accept="application/pdf"
+                onChange={(e) => setResumeFile(e.target.files?.[0] || null)}
+                className="max-w-xs"
+              />
+              <Button
+                type="button"
+                onClick={handleResumeUpload}
+                disabled={!resumeFile || resumeUploading}
+                className="gap-2"
+              >
+                {resumeUploading ? (
+                  <Loader2 size={16} className="animate-spin" />
+                ) : (
+                  <FileUp size={16} />
+                )}
+                {resumeUploading ? "Uploading..." : "Upload Resume"}
+              </Button>
+            </div>
+            {resumeStatus === "success" && (
+              <p className="text-sm text-green-500 flex items-center gap-1">
+                <CheckCircle size={14} /> Resume updated successfully!
+              </p>
+            )}
+            {resumeStatus === "error" && (
+              <p className="text-sm text-red-500 flex items-center gap-1">
+                <AlertCircle size={14} /> Upload failed. Check the file size (max 4MB).
+              </p>
+            )}
           </div>
 
           <Button type="submit" disabled={loading} className="gap-2" size="lg">
