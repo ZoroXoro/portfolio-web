@@ -14,7 +14,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="border-t border-border bg-background/50 backdrop-blur-sm">
+    <footer className="border-t border-white/10 bg-background/60 backdrop-blur-sm">
       <div className="max-w-6xl mx-auto px-6 py-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-muted-foreground">

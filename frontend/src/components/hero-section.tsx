@@ -50,19 +50,21 @@ export default function HeroSection() {
         <motion.div
           animate={{ x: [0, 40, -20, 0], y: [0, -30, 20, 0], scale: [1, 1.1, 0.95, 1] }}
           transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-          className="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-primary/5 blur-3xl"
+          className="absolute -top-32 -left-32 w-[28rem] h-[28rem] rounded-full bg-primary/25 blur-3xl"
         />
         <motion.div
           animate={{ x: [0, -30, 40, 0], y: [0, 40, -20, 0], scale: [1, 0.95, 1.1, 1] }}
           transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-          className="absolute -bottom-32 -right-32 w-96 h-96 rounded-full bg-primary/5 blur-3xl"
+          className="absolute -bottom-32 -right-32 w-[28rem] h-[28rem] rounded-full bg-cyan-400/15 blur-3xl"
         />
         <motion.div
           animate={{ x: [0, 20, -30, 0], y: [0, -20, 30, 0] }}
           transition={{ duration: 18, repeat: Infinity, ease: "linear" }}
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-primary/3 blur-3xl"
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-fuchsia-500/10 blur-3xl"
         />
       </div>
+
+      <div className="absolute inset-0 bg-grid pointer-events-none" />
 
       {/* Floating particles */}
       {[...Array(6)].map((_, i) => (
@@ -93,9 +95,9 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6"
+            className="glass inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-medium mb-6"
           >
-            <Sparkles size={14} />
+            <Sparkles size={14} className="text-primary" />
             <span>Available for work</span>
           </motion.div>
 
@@ -103,10 +105,10 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-4"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-extrabold tracking-tight mb-4"
           >
             Hi, I&apos;m{" "}
-            <span className="text-primary">Harsh</span>
+            <span className="text-gradient">Harsh</span>
           </motion.h1>
 
           {/* Animated role text */}
@@ -161,7 +163,7 @@ export default function HeroSection() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-6 py-3 bg-primary text-primary-foreground rounded-full font-medium hover:opacity-90 transition-opacity"
+                className="px-7 py-3 bg-brand-gradient text-white rounded-full font-semibold shadow-lg shadow-primary/30 hover:shadow-primary/50 transition-shadow"
               >
                 Get in Touch
               </motion.button>
@@ -170,7 +172,7 @@ export default function HeroSection() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-6 py-3 rounded-full font-medium border border-border hover:bg-muted transition-colors"
+                className="glass px-7 py-3 rounded-full font-medium hover:bg-white/10 transition-colors"
               >
                 View Projects
               </motion.button>
@@ -180,7 +182,7 @@ export default function HeroSection() {
               download="Harsh_Kamble_Resume.pdf"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full font-medium border border-border hover:bg-muted transition-colors"
+              className="glass inline-flex items-center gap-2 px-7 py-3 rounded-full font-medium hover:bg-white/10 transition-colors"
             >
               <Download size={16} />
               Resume
@@ -202,7 +204,7 @@ export default function HeroSection() {
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.15, y: -2 }}
                 whileTap={{ scale: 0.9 }}
-                className="p-2.5 rounded-full border border-border hover:bg-primary hover:text-primary-foreground hover:border-primary text-muted-foreground transition-colors"
+                className="glass p-2.5 rounded-full hover:bg-primary hover:text-primary-foreground hover:border-primary text-muted-foreground transition-colors"
                 aria-label={social.label}
               >
                 <social.icon size={20} />
@@ -223,10 +225,10 @@ export default function HeroSection() {
             className="relative"
           >
             {/* Glow ring behind image */}
-            <div className="absolute -inset-4 rounded-full bg-gradient-to-br from-primary/20 via-primary/5 to-transparent blur-2xl" />
+            <div className="absolute -inset-4 rounded-full bg-gradient-to-br from-primary/50 via-cyan-400/20 to-transparent blur-2xl" />
 
             {/* Profile image container */}
-            <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-border shadow-2xl">
+            <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-3xl overflow-hidden border border-white/15 ring-4 ring-primary/20 shadow-2xl shadow-primary/20">
               <Image
                 src="/profile.jpeg"
                 alt="Harsh Kamble"
@@ -240,16 +242,16 @@ export default function HeroSection() {
             <motion.div
               animate={{ rotate: 360 }}
               transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-              className="absolute -inset-8 rounded-full border border-dashed border-primary/15"
+              className="absolute -inset-8 rounded-[2.5rem] border border-dashed border-primary/30"
             >
-              <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3 h-3 rounded-full bg-primary/40" />
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3 h-3 rounded-full bg-primary" />
             </motion.div>
 
             {/* Floating status badge */}
             <motion.div
               animate={{ y: [0, -6, 0] }}
               transition={{ duration: 3, repeat: Infinity }}
-              className="absolute -bottom-2 -right-2 sm:bottom-2 sm:right-2 px-4 py-2 rounded-full bg-card border border-border shadow-lg text-sm font-medium"
+              className="absolute -bottom-2 -right-2 sm:bottom-2 sm:right-2 px-4 py-2 glass rounded-full shadow-lg text-sm font-medium"
               style={{ transform: "translateZ(40px)" }}
             >
               <span className="flex items-center gap-2">

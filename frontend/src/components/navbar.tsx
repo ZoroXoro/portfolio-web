@@ -24,13 +24,13 @@ export default function Navbar() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-background/80 border-b border-border"
+      className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-background/60 border-b border-white/10"
     >
       <nav className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         <Link href="/" className="text-xl font-bold tracking-tight">
           <motion.span
             whileHover={{ scale: 1.05 }}
-            className="bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent"
+            className="text-gradient inline-block"
           >
             Harsh.dev
           </motion.span>
@@ -45,14 +45,14 @@ export default function Navbar() {
                 className={cn(
                   "px-4 py-2 rounded-full text-sm font-medium transition-colors relative",
                   pathname === item.href
-                    ? "text-primary-foreground"
+                    ? "text-white"
                     : "text-muted-foreground hover:text-foreground"
                 )}
               >
                 {pathname === item.href && (
                   <motion.span
                     layoutId="navbar-active"
-                    className="absolute inset-0 bg-primary rounded-full"
+                    className="absolute inset-0 bg-brand-gradient rounded-full shadow-md shadow-primary/30"
                     style={{ zIndex: -1 }}
                     transition={{ type: "spring", stiffness: 350, damping: 30 }}
                   />
@@ -91,7 +91,7 @@ export default function Navbar() {
                   className={cn(
                     "px-4 py-3 rounded-lg text-sm font-medium transition-colors",
                     pathname === item.href
-                      ? "bg-primary text-primary-foreground"
+                      ? "bg-brand-gradient text-white"
                       : "text-muted-foreground hover:bg-muted hover:text-foreground"
                   )}
                 >

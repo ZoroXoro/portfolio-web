@@ -21,7 +21,7 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
         <a
           href="/resume.pdf"
           download
-          className="fixed bottom-6 right-6 z-50 flex items-center gap-2 px-4 py-3 bg-primary text-primary-foreground rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-200 font-medium text-sm group"
+          className="fixed bottom-6 right-6 z-50 flex items-center gap-2 px-4 py-3 bg-brand-gradient text-white rounded-full shadow-lg shadow-primary/30 hover:shadow-primary/50 hover:scale-105 transition-all duration-200 font-medium text-sm group"
           aria-label="Download Resume"
         >
           <Download size={18} />

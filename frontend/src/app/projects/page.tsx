@@ -31,7 +31,7 @@ function toAbsoluteUrl(url: string) {
 
 function ProjectSkeleton() {
   return (
-    <div className="rounded-2xl border border-border bg-card overflow-hidden animate-pulse">
+    <div className="rounded-2xl glass overflow-hidden animate-pulse">
       <div className="w-full h-48 sm:h-56 md:h-64 bg-muted" />
       <div className="p-6 md:p-8">
         <div className="h-7 bg-muted rounded-lg w-2/3 mb-3" />
@@ -82,7 +82,7 @@ export default function ProjectsPage() {
         <div className="max-w-6xl mx-auto">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <h1 className="text-4xl md:text-5xl font-bold mb-4">Projects</h1>
+              <h1 className="text-4xl md:text-6xl font-extrabold mb-4">My <span className="text-gradient">Projects</span></h1>
               <p className="text-muted-foreground max-w-2xl mx-auto">
                 A collection of projects I&apos;ve built — from client websites to enterprise ERP systems.
               </p>
@@ -90,8 +90,8 @@ export default function ProjectsPage() {
           </ScrollReveal>
 
           {loading ? (
-            <div className="space-y-8">
-              {[...Array(3)].map((_, i) => (
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {[...Array(4)].map((_, i) => (
                 <ProjectSkeleton key={i} />
               ))}
             </div>
@@ -103,13 +103,13 @@ export default function ProjectsPage() {
               </p>
             </div>
           ) : (
-            <div className="space-y-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {projects.map((project, i) => (
-                <ScrollReveal key={project.id} delay={i * 0.1}>
+                <ScrollReveal key={project.id} delay={(i % 2) * 0.1} className="h-full">
                   <motion.div
                     whileHover={{ y: -4 }}
                     transition={{ type: "spring", stiffness: 300 }}
-                    className="group relative rounded-2xl border border-border bg-card hover:border-primary/40 hover:shadow-xl hover:shadow-primary/5 transition-all overflow-hidden"
+                    className="group relative h-full flex flex-col rounded-2xl glass hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/15 transition-all overflow-hidden"
                   >
                     {/* Project Image */}
                     {project.imageUrl && (
@@ -124,11 +124,11 @@ export default function ProjectsPage() {
                       </div>
                     )}
 
-                    <div className="p-6 md:p-8">
+                    <div className="p-6 md:p-7 flex flex-col flex-1">
                       {/* Header */}
                       <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4 mb-4">
                         <div>
-                          <h3 className="text-xl md:text-2xl font-bold group-hover:text-primary transition-colors">
+                          <h3 className="text-xl md:text-2xl font-bold group-hover:text-gradient transition-colors">
                             {project.title}
                           </h3>
                           {project.role && (
@@ -160,7 +160,7 @@ export default function ProjectsPage() {
                               rel="noopener noreferrer"
                               whileHover={{ scale: 1.1 }}
                               whileTap={{ scale: 0.95 }}
-                              className="p-2 rounded-lg bg-primary text-primary-foreground hover:opacity-90 transition-opacity"
+                              className="p-2 rounded-lg bg-brand-gradient text-white shadow-md shadow-primary/30"
                               aria-label="Live site"
                             >
                               <ExternalLink size={16} />
@@ -173,7 +173,7 @@ export default function ProjectsPage() {
                               rel="noopener noreferrer"
                               whileHover={{ scale: 1.1 }}
                               whileTap={{ scale: 0.95 }}
-                              className="p-2 rounded-lg bg-muted hover:bg-primary hover:text-primary-foreground transition-colors"
+                              className="p-2 rounded-lg bg-white/10 hover:bg-primary hover:text-primary-foreground transition-colors"
                               aria-label="GitHub"
                             >
                               <Github size={16} />
@@ -183,7 +183,7 @@ export default function ProjectsPage() {
                       </div>
 
                       {/* Description */}
-                      <p className="text-muted-foreground mb-4 leading-relaxed">
+                      <p className="text-muted-foreground mb-5 leading-relaxed flex-1">
                         {project.description}
                       </p>
 

@@ -47,8 +47,8 @@ export default function HomePage() {
       <section className="py-24 px-6">
         <div className="max-w-6xl mx-auto">
           <ScrollReveal>
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
-              What I Do
+            <h2 className="text-3xl md:text-5xl font-bold text-center mb-4">
+              What I <span className="text-gradient">Do</span>
             </h2>
             <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-16">
               From concept to deployment — I build digital solutions that make a difference.
@@ -61,10 +61,10 @@ export default function HomePage() {
                 <motion.div
                   whileHover={{ y: -8, scale: 1.02 }}
                   transition={{ type: "spring", stiffness: 300 }}
-                  className="p-6 rounded-2xl border border-border bg-card hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5 transition-all h-full"
+                  className="glass p-6 rounded-2xl hover:border-primary/60 hover:bg-white/[0.07] hover:shadow-xl hover:shadow-primary/10 transition-all h-full"
                 >
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
-                    <item.icon className="w-6 h-6 text-primary" />
+                  <div className="w-12 h-12 rounded-xl bg-brand-gradient flex items-center justify-center mb-4">
+                    <item.icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="font-semibold text-lg mb-2">{item.title}</h3>
                   <p className="text-sm text-muted-foreground">{item.description}</p>
@@ -76,11 +76,11 @@ export default function HomePage() {
       </section>
 
       {/* Tech Stack */}
-      <section className="py-24 px-6 bg-muted/30">
+      <section className="py-24 px-6 bg-white/[0.02] border-y border-white/5">
         <div className="max-w-6xl mx-auto">
           <ScrollReveal>
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-              Tech Stack
+            <h2 className="text-3xl md:text-5xl font-bold text-center mb-12">
+              Tech <span className="text-gradient">Stack</span>
             </h2>
           </ScrollReveal>
           <ScrollReveal delay={0.2}>
@@ -96,7 +96,7 @@ export default function HomePage() {
                 >
                   <Badge
                     variant="secondary"
-                    className="px-4 py-2 text-sm font-medium cursor-default hover:bg-primary hover:text-primary-foreground transition-colors"
+                    className="glass px-4 py-2 text-sm font-medium cursor-default hover:bg-primary hover:text-primary-foreground transition-colors"
                   >
                     {tech}
                   </Badge>
@@ -109,10 +109,11 @@ export default function HomePage() {
 
       {/* CTA Section */}
       <section className="py-24 px-6">
-        <div className="max-w-4xl mx-auto text-center">
-          <ScrollReveal>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Let&apos;s Build Something Together
+        <div className="relative max-w-4xl mx-auto text-center glass rounded-3xl px-6 py-16 overflow-hidden">
+          <div className="absolute -top-24 left-1/2 -translate-x-1/2 w-96 h-48 rounded-full bg-primary/30 blur-3xl pointer-events-none" />
+          <ScrollReveal className="relative">
+            <h2 className="text-3xl md:text-5xl font-bold mb-4">
+              Let&apos;s Build Something <span className="text-gradient">Together</span>
             </h2>
             <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
               I&apos;m always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
@@ -121,7 +122,7 @@ export default function HomePage() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground rounded-full font-medium text-lg hover:opacity-90 transition-opacity"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-brand-gradient text-white rounded-full font-semibold text-lg shadow-lg shadow-primary/30 hover:shadow-primary/50 transition-shadow"
               >
                 Get in Touch
                 <ArrowRight size={20} />
