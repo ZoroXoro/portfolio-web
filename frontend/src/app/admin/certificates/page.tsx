@@ -114,7 +114,7 @@ export default function AdminCertificatesPage() {
     <div>
       <div className="flex items-center justify-between mb-8">
         <div>
-          <h1 className="text-3xl font-bold">Certificates</h1>
+          <h1 className="wide text-3xl font-bold tracking-[-0.02em]">Certificates</h1>
           <p className="text-muted-foreground">Upload and manage your certificates</p>
         </div>
         <Button onClick={openCreate} className="gap-2">
@@ -129,14 +129,14 @@ export default function AdminCertificatesPage() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-start justify-center p-6 overflow-auto"
+            className="fixed inset-0 z-50 bg-black/60  flex items-start justify-center p-6 overflow-auto"
             onClick={() => setShowForm(false)}
           >
             <motion.div
               initial={{ opacity: 0, y: 20, scale: 0.95 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 20, scale: 0.95 }}
-              className="w-full max-w-lg bg-card border border-border rounded-2xl p-6 mt-10"
+              className="w-full max-w-lg bg-popover border border-border shadow-2xl rounded-3xl p-6 mt-10"
               onClick={(e) => e.stopPropagation()}
             >
               <div className="flex items-center justify-between mb-6">
@@ -224,7 +224,7 @@ export default function AdminCertificatesPage() {
             layout
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="rounded-xl border border-border bg-card overflow-hidden group"
+            className="border border-border bg-card overflow-hidden group"
           >
             {cert.imageUrl ? (
               cert.fileType === "pdf" ? (
@@ -294,7 +294,7 @@ export default function AdminCertificatesPage() {
             initial={{ opacity: 0, y: 50, x: "-50%" }}
             animate={{ opacity: 1, y: 0, x: "-50%" }}
             exit={{ opacity: 0, y: 50, x: "-50%" }}
-            className={`fixed bottom-6 left-1/2 z-[60] flex items-center gap-3 px-5 py-3 rounded-xl shadow-lg border ${
+            className={`fixed bottom-6 left-1/2 z-[60] flex items-center gap-3 px-5 py-3  shadow-lg border ${
               toast.type === "success"
                 ? "bg-green-500/10 border-green-500/30 text-green-500"
                 : "bg-red-500/10 border-red-500/30 text-red-500"

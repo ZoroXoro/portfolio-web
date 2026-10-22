@@ -1,0 +1,84 @@
+{
+  "title": "Choose Zoro's visual world",
+  "question": "The roll assigned The Appraisal Sheet. Keep it, take an alternate, or re-roll.",
+  "options": [
+    {
+      "id": "assigned",
+      "label": "The Appraisal Sheet",
+      "kicker": "THE ROLL",
+      "lineage": "A maker's appraisal certificate: full-size ink rubbing of the work, attested fields, one seal",
+      "thesis": "Every project is presented as an attested specimen, not a card: the work at full size, its facts in a ruled table, sealed only when verifiably live.",
+      "palette": ["#F7F8F6", "#16181A", "#5C6166", "#D6D9D6", "#0F7A55"],
+      "materials": ["graphite rubbing on cool white sheet", "hairline ruled attestation tables", "one viridian seal stamp"],
+      "viewport": "ZORO set wide and heavy at the top left as a maker's mark, a two-line statement of what he builds beside it, and the first specimen (Lolo Fruits, No. 01) already entering at the fold, its seal visible; contact and resume as plain ruled actions under the statement.",
+      "risk": "Reads stiff if the tables crowd the work; the screenshots must stay dominant and the attestation quiet.",
+      "raised": [
+        {"from": "challenger-nixie", "raise": "The viridian seal is the only colour on the page and only ever means verified-live: a link that resolves, a message that was delivered."},
+        {"from": "challenger-cracktro", "raise": "Nothing is enclosed: projects, capabilities and stack sit on hairline rules and baselines, never inside rounded cards."},
+        {"from": "challenger-album", "raise": "Every specimen carries a fixed catalogue number (No. 01, 02...) that holds in the list, the detail page and the URL."}
+      ]
+    },
+    {
+      "id": "model-pick",
+      "label": "Release Notes",
+      "kicker": "IMPECCABLE’S PICK",
+      "lineage": "Changelogs and git history: versioned entries, diffs, tags",
+      "thesis": "Zoro's career as a changelog: each shipped product is a tagged release with what changed and where it runs.",
+      "palette": ["#FFFFFF", "#111316", "#6B7075", "#1F8A4C", "#C2410C"],
+      "materials": ["monospaced version tags", "diff gutters", "ruled release entries"],
+      "viewport": "A release header (zoro v2026.10) with the newest shipped project as the top entry, its diff-style highlights and links.",
+      "risk": "Familiar: changelog-styled developer portfolios are common, so it reads competent rather than memorable."
+    },
+    {
+      "id": "challenger-cracktro",
+      "label": "Cracktro Scroller",
+      "verdict": "declined",
+      "lineage": "Demoscene title screens: bitmap type on an emissive void",
+      "thesis": "The work rides baselines over a black void; depth is rank.",
+      "palette": ["#050505", "#EDE8DA", "#8A8A84", "#F2A900"],
+      "materials": ["bitmap face", "drifting dust fields"],
+      "viewport": "One still ivory line naming Zoro over drifting grey dust.",
+      "case": "Fuses poorly: hiring managers lose clarity, and black plus one amber is the category's dark default.",
+      "risk": "Novelty over evidence.",
+      "kept": "Nothing enclosed by boxes; content rides baselines and rules."
+    },
+    {
+      "id": "challenger-album",
+      "label": "Sticker Album Spread",
+      "verdict": "declined",
+      "lineage": "Collector albums with numbered slots and ghosted gaps",
+      "thesis": "Projects as numbered slots in a fixed set.",
+      "palette": ["#EFEDE6", "#1C1C1C", "#C9C5BA", "#E03A2F"],
+      "materials": ["matte album paper", "glossy stickers"],
+      "viewport": "A spread of numbered project slots.",
+      "case": "Fuses poorly: empty slots would advertise missing work on a portfolio.",
+      "risk": "Playful register undercuts hiring intent.",
+      "kept": "Fixed catalogue numbering for every project."
+    },
+    {
+      "id": "challenger-nixie",
+      "label": "Nixie Counter",
+      "verdict": "declined",
+      "lineage": "Laboratory nixie-tube counters",
+      "thesis": "Quantities are the interface.",
+      "palette": ["#121212", "#FF7A1A", "#6E6E6E"],
+      "materials": ["glass envelopes", "steel chassis"],
+      "viewport": "Tube banks of counts.",
+      "case": "Fuses poorly: the portfolio has almost no honest metrics to count, and inventing them is forbidden.",
+      "risk": "Would push fabricated numbers.",
+      "kept": "One colour, used only for a lit (live) state."
+    }
+  ],
+  "reroll": {"registers": ["safer", "bolder"]},
+  "buildPath": {"value": "code", "toggle": false},
+  "canon": true,
+  "canonCard": {
+    "label": "The category standard",
+    "thesis": "The developer portfolio everyone ships, executed well: dark ground, gradient hero, bento grid of project cards.",
+    "palette": ["#0B0D12", "#F5F7FA", "#7C6CFF", "#3DD6F5"],
+    "materials": ["dark glass cards", "gradient accents"],
+    "viewport": "Big name and role headline over a gradient, CTA pair, project card grid below.",
+    "risk": "Indistinguishable from thousands of others by design; it is also what your brief asks to move away from."
+  },
+  "steer": true
+}

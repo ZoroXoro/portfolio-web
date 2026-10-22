@@ -111,3 +111,19 @@ export async function updateProfile(data: Record<string, unknown>) {
   });
   return handleResponse(res);
 }
+
+// Connections (contact form messages)
+export async function fetchConnections() {
+  const headers = await authHeaders();
+  const res = await fetch(`${API_URL}/connections`, { headers });
+  return handleResponse(res);
+}
+
+export async function deleteConnection(id: string) {
+  const headers = await authHeaders();
+  const res = await fetch(`${API_URL}/connections/${id}`, {
+    method: "DELETE",
+    headers,
+  });
+  return handleResponse(res);
+}

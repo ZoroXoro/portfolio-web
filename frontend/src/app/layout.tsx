@@ -1,32 +1,30 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Archivo } from "next/font/google";
 import "./globals.css";
-import ClientLayout from "@/components/client-layout";
+import { site } from "@/data/site";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+// One family, three voices via the width axis (expanded mark, text, condensed labels)
+const archivo = Archivo({
+  variable: "--font-archivo",
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  axes: ["wdth"],
 });
 
 export const metadata: Metadata = {
-  title: "Harsh Kamble | Web & App Developer",
-  description:
-    "Portfolio of Harsh Kamble — Web & App Developer, Co-Founder of Fusionexlabs. Building modern digital solutions with React, Next.js, Flutter, and more.",
-  keywords: [
-    "Harsh Kamble",
-    "Web Developer",
-    "App Developer",
-    "Fusionexlabs",
-    "React",
-    "Next.js",
-    "Flutter",
-    "Mumbai",
-  ],
+  metadataBase: new URL(site.url),
+  title: {
+    default: `${site.brand} — Developer & Creative Technologist`,
+    template: `%s — ${site.brand}`,
+  },
+  description: site.description,
+  authors: [{ name: site.legalName }],
+  keywords: [site.brand, site.legalName, "Full-stack developer", "Flutter", "Next.js", "AI engineer", "RAG", "Mumbai"],
+  openGraph: {
+    title: `${site.brand} — Developer & Creative Technologist`,
+    description: site.description,
+    type: "website",
+    locale: "en_IN",
+  },
 };
 
 export default function RootLayout({
@@ -35,13 +33,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col">
-        <ClientLayout>{children}</ClientLayout>
-      </body>
+    <html lang="en" data-scroll-behavior="smooth" className={`${archivo.variable} antialiased`}>
+      <body className="min-h-dvh">{children}</body>
     </html>
   );
 }

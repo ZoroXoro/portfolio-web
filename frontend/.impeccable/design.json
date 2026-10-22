@@ -1,0 +1,347 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-21T21:42:09.267101+00:00",
+  "title": "Design System: Zoro",
+  "extensions": {
+    "colorMeta": {
+      "seal-viridian": {
+        "role": "primary",
+        "displayName": "Seal Viridian",
+        "tonalRamp": [
+          "oklch(15% 0.11 160)",
+          "oklch(25% 0.11 160)",
+          "oklch(35% 0.11 160)",
+          "oklch(48% 0.11 160)",
+          "oklch(60% 0.11 160)",
+          "oklch(72% 0.11 160)",
+          "oklch(85% 0.11 160)",
+          "oklch(95% 0.11 160)"
+        ]
+      },
+      "graphite-ink": {
+        "role": "neutral",
+        "displayName": "Graphite Ink",
+        "tonalRamp": [
+          "oklch(15% 0.006 250)",
+          "oklch(25% 0.006 250)",
+          "oklch(35% 0.006 250)",
+          "oklch(48% 0.006 250)",
+          "oklch(60% 0.006 250)",
+          "oklch(72% 0.006 250)",
+          "oklch(85% 0.006 250)",
+          "oklch(95% 0.006 250)"
+        ]
+      },
+      "cool-sheet": {
+        "role": "neutral",
+        "displayName": "Cool Sheet",
+        "tonalRamp": [
+          "oklch(15% 0.003 140)",
+          "oklch(25% 0.003 140)",
+          "oklch(35% 0.003 140)",
+          "oklch(48% 0.003 140)",
+          "oklch(60% 0.003 140)",
+          "oklch(72% 0.003 140)",
+          "oklch(85% 0.003 140)",
+          "oklch(95% 0.003 140)"
+        ]
+      },
+      "card-white": {
+        "role": "neutral",
+        "displayName": "Card White",
+        "tonalRamp": [
+          "oklch(15% 0 0)",
+          "oklch(25% 0 0)",
+          "oklch(35% 0 0)",
+          "oklch(48% 0 0)",
+          "oklch(60% 0 0)",
+          "oklch(72% 0 0)",
+          "oklch(85% 0 0)",
+          "oklch(95% 0 0)"
+        ]
+      },
+      "slate-secondary": {
+        "role": "neutral",
+        "displayName": "Slate Secondary",
+        "tonalRamp": [
+          "oklch(15% 0.01 250)",
+          "oklch(25% 0.01 250)",
+          "oklch(35% 0.01 250)",
+          "oklch(48% 0.01 250)",
+          "oklch(60% 0.01 250)",
+          "oklch(72% 0.01 250)",
+          "oklch(85% 0.01 250)",
+          "oklch(95% 0.01 250)"
+        ]
+      },
+      "tint-band": {
+        "role": "neutral",
+        "displayName": "Tint Band",
+        "tonalRamp": [
+          "oklch(15% 0.004 140)",
+          "oklch(25% 0.004 140)",
+          "oklch(35% 0.004 140)",
+          "oklch(48% 0.004 140)",
+          "oklch(60% 0.004 140)",
+          "oklch(72% 0.004 140)",
+          "oklch(85% 0.004 140)",
+          "oklch(95% 0.004 140)"
+        ]
+      },
+      "hairline": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "tonalRamp": [
+          "oklch(15% 0.005 140)",
+          "oklch(25% 0.005 140)",
+          "oklch(35% 0.005 140)",
+          "oklch(48% 0.005 140)",
+          "oklch(60% 0.005 140)",
+          "oklch(72% 0.005 140)",
+          "oklch(85% 0.005 140)",
+          "oklch(95% 0.005 140)"
+        ]
+      },
+      "input-stroke": {
+        "role": "neutral",
+        "displayName": "Input Stroke",
+        "tonalRamp": [
+          "oklch(15% 0.006 140)",
+          "oklch(25% 0.006 140)",
+          "oklch(35% 0.006 140)",
+          "oklch(48% 0.006 140)",
+          "oklch(60% 0.006 140)",
+          "oklch(72% 0.006 140)",
+          "oklch(85% 0.006 140)",
+          "oklch(95% 0.006 140)"
+        ]
+      },
+      "sidebar-sheet": {
+        "role": "neutral",
+        "displayName": "Sidebar Sheet",
+        "tonalRamp": [
+          "oklch(15% 0.004 140)",
+          "oklch(25% 0.004 140)",
+          "oklch(35% 0.004 140)",
+          "oklch(48% 0.004 140)",
+          "oklch(60% 0.004 140)",
+          "oklch(72% 0.004 140)",
+          "oklch(85% 0.004 140)",
+          "oklch(95% 0.004 140)"
+        ]
+      },
+      "destructive-red": {
+        "role": "error",
+        "displayName": "Destructive Red",
+        "tonalRamp": [
+          "oklch(15% 0.17 30)",
+          "oklch(25% 0.17 30)",
+          "oklch(35% 0.17 30)",
+          "oklch(48% 0.17 30)",
+          "oklch(60% 0.17 30)",
+          "oklch(72% 0.17 30)",
+          "oklch(85% 0.17 30)",
+          "oklch(95% 0.17 30)"
+        ]
+      },
+      "error-on-graphite": {
+        "role": "error",
+        "displayName": "Error on Graphite",
+        "tonalRamp": [
+          "oklch(15% 0.1 30)",
+          "oklch(25% 0.1 30)",
+          "oklch(35% 0.1 30)",
+          "oklch(48% 0.1 30)",
+          "oklch(60% 0.1 30)",
+          "oklch(72% 0.1 30)",
+          "oklch(85% 0.1 30)",
+          "oklch(95% 0.1 30)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "mark": {
+        "displayName": "Mark",
+        "purpose": "The ZORO wordmark: hero, header, footer, empty-plate numeral."
+      },
+      "display": {
+        "displayName": "Display",
+        "purpose": "Page titles on project detail and Certificates."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section titles."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Specimen titles, prefixed by the muted catalogue number."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Running text, tabular figures on."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Condensed caps field labels in attestation tables and forms."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "The one easing for settles, nav underline, plate hover and view transitions."
+      },
+      {
+        "name": "view-transition",
+        "value": "420ms var(--ease-out)",
+        "purpose": "Plate-to-detail morph via view-transition-name plate-<slug>; disabled under reduced motion."
+      },
+      {
+        "name": "seal-stamp",
+        "value": "spring, bounce 0.35, visualDuration 0.35s",
+        "purpose": "The only spring: the 64px seal on message delivery."
+      },
+      {
+        "name": "hover-quick",
+        "value": "150-200ms",
+        "purpose": "Rule and border color changes, arrow nudges."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "min-480",
+        "value": "480px"
+      },
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "md",
+        "value": "768px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Ruled Action",
+      "kind": "button",
+      "refersTo": "action-ruled",
+      "description": "Primary action on the sheet: ruled text, no fill.",
+      "html": "<a class=\"ds-action\" href=\"#\">Get in touch <svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><path d=\"M5 12h14M12 5l7 7-7 7\"/></svg></a>",
+      "css": ".ds-action{display:inline-flex;align-items:center;gap:8px;min-height:48px;padding-bottom:4px;border-bottom:2px solid var(--foreground,#16181a);color:var(--foreground,#16181a);font-family:Archivo,system-ui,sans-serif;font-size:1.125rem;font-weight:600;text-decoration:none;transition:border-color 150ms}.ds-action svg{transition:transform 200ms}.ds-action:hover{border-color:var(--muted-foreground,#5c6166)}.ds-action:hover svg{transform:translateX(4px)}.ds-action:focus-visible{outline:2px solid #16181a;outline-offset:3px}"
+    },
+    {
+      "name": "Submit (inverted field)",
+      "kind": "button",
+      "refersTo": "submit-inverse",
+      "description": "The single filled control, only on the graphite contact field.",
+      "html": "<div class=\"ds-inv\"><button class=\"ds-submit\">Send message</button></div>",
+      "css": ".ds-inv{background:#16181a;padding:24px}.ds-submit{height:52px;padding:0 28px;border:0;border-radius:0;background:#f7f8f6;color:#16181a;font-family:Archivo,system-ui,sans-serif;font-size:1rem;font-weight:600;cursor:pointer;transition:opacity 150ms,transform 150ms}.ds-submit:hover{opacity:.9}.ds-submit:active{transform:scale(.98)}.ds-submit:focus-visible{outline:2px solid #f7f8f6;outline-offset:3px}"
+    },
+    {
+      "name": "Underline Input",
+      "kind": "input",
+      "refersTo": "input-underline",
+      "description": "Contact field on the inverted graphite field.",
+      "html": "<div class=\"ds-inv\"><label class=\"ds-flabel\">Name<input class=\"ds-input\" placeholder=\"Your name\"></label></div>",
+      "css": ".ds-inv{background:#16181a;padding:24px}.ds-flabel{display:block;color:rgba(247,248,246,.7);font-family:Archivo,system-ui,sans-serif;font-stretch:72%;font-variation-settings:'wdth' 72;font-weight:600;font-size:.8125rem;letter-spacing:.06em;text-transform:uppercase}.ds-input{display:block;width:100%;margin-top:8px;padding:12px 0;border:0;border-bottom:1px solid rgba(247,248,246,.35);background:transparent;color:#f7f8f6;font:400 1.125rem Archivo,system-ui,sans-serif;text-transform:none;letter-spacing:0;transition:border-color 150ms}.ds-input::placeholder{color:rgba(247,248,246,.45)}.ds-input:focus{outline:none;border-bottom-color:#f7f8f6}"
+    },
+    {
+      "name": "Header Navigation",
+      "kind": "nav",
+      "refersTo": "nav",
+      "description": "Slate links; active gets graphite text and a 2px underline scaling in from the left.",
+      "html": "<nav class=\"ds-nav\"><a href=\"#\" aria-current=\"location\">Work</a><a href=\"#\">Capabilities</a><a href=\"#\">About</a><a href=\"#\">Contact</a></nav>",
+      "css": ".ds-nav{display:flex;gap:32px;height:64px;align-items:center;font-family:Archivo,system-ui,sans-serif}.ds-nav a{position:relative;padding:8px 0;font-size:.9375rem;font-weight:500;color:#5c6166;text-decoration:none;transition:color 200ms}.ds-nav a::after{content:'';position:absolute;left:0;right:0;bottom:-1px;height:2px;background:#16181a;transform:scaleX(0);transform-origin:left;transition:transform 300ms cubic-bezier(0.16,1,0.3,1)}.ds-nav a:hover,.ds-nav a[aria-current]{color:#16181a}.ds-nav a[aria-current]::after,.ds-nav a:hover::after{transform:scaleX(1)}.ds-nav a:focus-visible{outline:2px solid #16181a;outline-offset:3px}"
+    },
+    {
+      "name": "Attestation Table",
+      "kind": "custom",
+      "refersTo": "attest-row",
+      "description": "Graphite head rule, hairline rows, condensed-caps labels.",
+      "html": "<dl class=\"ds-attest\"><div><dt>Role</dt><dd>Software Developer</dd></div><div><dt>Period</dt><dd>April 2025 – March 2026</dd></div><div><dt>Stack</dt><dd>Flutter, Firebase, Next.js</dd></div></dl>",
+      "css": ".ds-attest{margin:0;border-top:1px solid #16181a;font-family:Archivo,system-ui,sans-serif;font-variant-numeric:tabular-nums;color:#16181a}.ds-attest div{display:grid;grid-template-columns:7.5rem 1fr;gap:16px;padding:14px 0;border-bottom:1px solid #d6d9d6}.ds-attest dt{color:#5c6166;font-variation-settings:'wdth' 72;font-weight:600;font-size:.8125rem;letter-spacing:.06em;text-transform:uppercase;padding-top:.2em}.ds-attest dd{margin:0}"
+    },
+    {
+      "name": "Sealed Live Link",
+      "kind": "custom",
+      "refersTo": "seal",
+      "description": "The seal leads a resolving live link; viridian appears nowhere else.",
+      "html": "<a class=\"ds-sealed\" href=\"#\"><svg viewBox=\"0 0 32 32\" width=\"18\" height=\"18\" style=\"transform:rotate(-3deg)\" aria-hidden=\"true\"><rect width=\"32\" height=\"32\" fill=\"#0f7a55\"/><rect x=\"2.5\" y=\"2.5\" width=\"27\" height=\"27\" fill=\"none\" stroke=\"#f7f8f6\" stroke-width=\"1.5\"/><path d=\"M9 9.5h14v3.2L13.6 19.3H23v3.2H9v-3.2l9.4-6.6H9z\" fill=\"#f7f8f6\"/></svg><span>lolofruits.com</span></a>",
+      "css": ".ds-sealed{display:inline-flex;align-items:center;gap:8px;min-height:44px;color:#16181a;font:600 1rem Archivo,system-ui,sans-serif;text-decoration:none}.ds-sealed span{text-decoration:underline;text-underline-offset:4px}.ds-sealed:hover span{text-decoration:none}.ds-sealed:focus-visible{outline:2px solid #16181a;outline-offset:3px}"
+    },
+    {
+      "name": "Specimen Plate with Title",
+      "kind": "card",
+      "refersTo": "plate",
+      "description": "Framed screenshot (not a card) with the catalogue number inside the title line.",
+      "html": "<a class=\"ds-plate\" href=\"#\"><span class=\"ds-plate-img\"></span><span class=\"ds-plate-title\"><span class=\"ds-num\">05</span>Sunil Cricket Academy</span></a>",
+      "css": ".ds-plate{display:block;width:300px;color:#16181a;text-decoration:none;font-family:Archivo,system-ui,sans-serif}.ds-plate-img{display:block;aspect-ratio:16/10;background:#fff;border:1px solid rgba(22,24,26,.85);transition:border-color 200ms}.ds-plate:hover .ds-plate-img{border-color:#16181a}.ds-plate-title{display:block;margin-top:16px;font-size:1.125rem;font-weight:700;font-variation-settings:'wdth' 112}.ds-plate:hover .ds-plate-title{text-decoration:underline}.ds-num{margin-right:.45em;font-weight:500;color:#5c6166;font-variant-numeric:tabular-nums}.ds-plate:focus-visible{outline:2px solid #16181a;outline-offset:3px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Appraisal Sheet",
+    "overview": "The site reads as an appraiser's record of a maker's work. Each project is a specimen shown at full size as a framed plate, with its facts ruled underneath in a field-label table. Graphite ink sits on a cool white sheet. Structure comes from 1px hairlines and one heavier graphite rule at the head of each table, not from boxes, cards or shadows. A single viridian seal means \"verified live\" and nothing else.\n\nOne typeface, Archivo, carries every voice through its width axis. The expanded black cut is the maker's mark, normal width is for reading, and the condensed caps cut labels the fields. Figures are tabular everywhere, so catalogue numbers, periods and dates line up like entries in a ledger. Density is generous: wide section spacing, a 12-column grid inside a 77.5rem measure, and plates that are allowed to be large.\n\nThe system rejects the category default of a dark gradient hero over a bento grid of identical cards. Contact and footer flip to an inverted graphite field, which is the only large tonal shift apart from the pale tint band behind Capabilities.",
+    "keyCharacteristics": [
+      "Graphite on cool white, with one rationed viridian accent that only signals verification.",
+      "One family (Archivo) in three widths: expanded mark, normal text, condensed caps for labels.",
+      "Hairline rules and a graphite head rule instead of containers. Squared corners. No elevation.",
+      "Screenshots framed as plates that morph into their detail page through view transitions.",
+      "Tabular figures, en-dash ranges and catalogue numbers that read like a ledger."
+    ],
+    "rules": [
+      {
+        "name": "The One Seal Rule",
+        "body": "Viridian appears only where a live link resolves or a message has been delivered. Availability, status and emphasis never use it. Availability is marked with a small graphite square (6px).",
+        "section": "colors"
+      },
+      {
+        "name": "The Inverted Field Rule",
+        "body": "Contact and the footer sit on a full graphite field with sheet-colored text. Inside it, rules and secondary text are the sheet color at reduced opacity (about 25% for rules, 60 to 75% for text).",
+        "section": "colors"
+      },
+      {
+        "name": "The No-Kicker Rule",
+        "body": "Headings are never preceded by an eyebrow or kicker. A catalogue number belongs in the title line itself as a muted, tabular, medium-weight prefix (for example \"01 Lolo Fruits\").",
+        "section": "typography"
+      },
+      {
+        "name": "The Ledger Rule",
+        "body": "Ranges and periods use en dashes (\"April 2025 – March 2026\", \"No. 05–12\"). Certificate dates are written \"Mon YYYY\".",
+        "section": "typography"
+      },
+      {
+        "name": "The Ruled-Not-Raised Rule",
+        "body": "Separate content with a rule, never with a shadow or an enclosing card. If something needs emphasis, make its rule heavier (the graphite head rule, the 2px action rule).",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** reserve Seal Viridian (#0f7a55) for resolving live links and the delivery stamp.",
+      "**Do** mark availability with a 6px graphite square and plain text.",
+      "**Do** make primary actions ruled text: semibold, 2px graphite bottom rule, no fill.",
+      "**Do** set catalogue numbers inside the title line as a muted tabular prefix.",
+      "**Do** build facts as attestation tables: a graphite head rule, hairline rows and condensed-caps labels.",
+      "**Do** keep corners at the 2px/0px radius tokens and borders at 1px.",
+      "**Do** put Contact and the footer on the inverted graphite field.",
+      "**Do** animate with the one exponential ease-out, cubic-bezier(0.16, 1, 0.3, 1), and keep settles short and once per section.",
+      "**Do** give every plate a view-transition-name shared with its detail page.",
+      "**Do** write ranges with en dashes and certificate dates as \"Mon YYYY\"."
+    ],
+    "donts": [
+      "**Don't** use viridian for status, availability, emphasis or decoration.",
+      "**Don't** put kickers or eyebrows above headings.",
+      "**Don't** use shadows, gradients, blur or glass on the public site.",
+      "**Don't** wrap specimens in cards or boxes, and don't lay them out as an even bento grid.",
+      "**Don't** fill primary actions on the sheet. The submit block on the inverted field is the only filled control.",
+      "**Don't** introduce a second typeface. Get new voices from Archivo's width axis.",
+      "**Don't** use springs or bounce anywhere except the seal stamp."
+    ]
+  }
+}

@@ -75,7 +75,7 @@ export default function AdminProfilePage() {
 
   return (
     <div>
-      <h1 className="text-3xl font-bold mb-2">Profile Settings</h1>
+      <h1 className="wide text-3xl font-bold tracking-[-0.02em] mb-2">Profile Settings</h1>
       <p className="text-muted-foreground mb-8">Update your personal information</p>
 
       <motion.div
@@ -84,7 +84,7 @@ export default function AdminProfilePage() {
         className="max-w-2xl"
       >
         <form onSubmit={handleSubmit} className="space-y-6">
-          <div className="p-6 rounded-xl border border-border bg-card space-y-4">
+          <div className="p-6 border border-border bg-card space-y-4">
             <h2 className="font-semibold text-lg">Personal Info</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
@@ -110,13 +110,13 @@ export default function AdminProfilePage() {
                 value={form.bio}
                 onChange={(e) => setForm({ ...form, bio: e.target.value })}
                 rows={4}
-                placeholder="Write a short bio..."
+                placeholder="Shown on your About page. Leave empty to use the default bio."
                 className="mt-1"
               />
             </div>
           </div>
 
-          <div className="p-6 rounded-xl border border-border bg-card space-y-4">
+          <div className="p-6 border border-border bg-card space-y-4">
             <h2 className="font-semibold text-lg">Contact Details</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
@@ -147,7 +147,7 @@ export default function AdminProfilePage() {
             </div>
           </div>
 
-          <div className="p-6 rounded-xl border border-border bg-card space-y-4">
+          <div className="p-6 border border-border bg-card space-y-4">
             <h2 className="font-semibold text-lg">Social Links</h2>
             <div>
               <Label>GitHub URL</Label>
@@ -176,7 +176,7 @@ export default function AdminProfilePage() {
             </div>
           </div>
 
-          <div className="p-6 rounded-xl border border-border bg-card space-y-4">
+          <div className="p-6 border border-border bg-card space-y-4">
             <div className="flex items-center justify-between">
               <h2 className="font-semibold text-lg">Resume</h2>
               {hasResume && (

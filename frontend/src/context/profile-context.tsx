@@ -17,14 +17,14 @@ interface Profile {
 
 const defaults: Profile = {
   name: "Harsh Kamble",
-  title: "Web & App Developer",
+  title: "Full-Stack Developer · Aspiring AI Engineer",
   bio: "",
   email: "harshworks20@gmail.com",
-  phone: "+91 7039140235",
+  phone: "",
   location: "Mumbai, India",
-  github: "https://github.com/Harsh-kamble",
-  linkedin: "https://www.linkedin.com/in/harsh-kamble",
-  whatsapp: "917039140235",
+  github: "https://github.com/ZoroXoro",
+  linkedin: "https://www.linkedin.com/in/harsh-kamble-xzro/",
+  whatsapp: "",
   resumeUrl: "",
 };
 
